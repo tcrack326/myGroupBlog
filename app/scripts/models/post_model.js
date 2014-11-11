@@ -1,10 +1,9 @@
 (function(){
   App.Models.PostModel = Parse.Object.extend({
     defaults:{
-      title:"",
-      user:'',
-      when:'',
+      title:'',
       content:'',
+      category:''
     },
 
 
