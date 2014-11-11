@@ -24,9 +24,10 @@
   <body>
 
     <div class = "container">
-      <header></header>
+      <header><h1>Hollar</h1><button id="loginBtn"> Login </button></header>
       <div id="viewContainer">
 
+        <ul id="listOfPosts"></ul>
       </div>
 
 
@@ -34,9 +35,34 @@
 
     </div>
 
-    <script id="postListTemp" type="text/template">
+    <script id="postTemp" type="text/template">
 
+        <li>
+          <h2><%= title %></h2>
+          <p><%= content %></p>
+          <span><%= category %></span>
+        </li>
     </script>
+
+    <script type="text/template" id="loginTemp">
+          <button id="signUpBtn"> Signup </button>
+          <form id="loginForm">
+            <input id="username"type="text" placeholder="Username">
+            <input id="password"type="password" placeholder="Password" >
+            <button id="loginSubmit">submit</button>
+          </form>
+    </script>
+
+
+    <script type="text/template" id="signUpTemp">
+        <form id="signUpForm">
+          <input id="usernameNew"type="text" placeholder="Username">
+          <input id="passwordNew"type="password" placeholder="Password">
+          <input id="emailNew" type="email" placeholder="e-mail">
+          <button id="signUpSubmit">submit</button>
+        </form>
+    </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -54,11 +80,14 @@
       App.Models = {};
       App.Routers = {};
     </script>
+
         <!-- build:js scripts/main.js -->
-        <script src="scripts/collections/post_collection.js"></script>
+        <script src="scripts/views/login_view.js"></script>
         <script src="scripts/views/home_view.js"></script>
+        <script src="scripts/views/signup_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
+        <script src="scripts/collections/post_collection.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

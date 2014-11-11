@@ -1,5 +1,6 @@
-(function(){
+(function (){
+
   App.Collections.PostCollection = Parse.Collection.extend({
-    model:App.PostModel
+    model: App.Models.PostModel
   });
 }());
