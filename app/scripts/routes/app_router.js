@@ -4,7 +4,7 @@
     routes:{
       '' : 'home',
       'login' : 'userLogin',
-      'signup': 'userSignup'
+      'signup' : 'userSignUp'
     },
 
 
