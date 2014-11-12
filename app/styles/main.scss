@@ -12,9 +12,8 @@ body {
    /* background:url(../images/1.jpg);  */
 }
 
-#container{
-  @include span-columns (8);
-  @include shift(2);
+.container{
+  @include span-columns (12);
   overflow:auto;
 
   #viewContainer{
@@ -86,9 +85,10 @@ body {
   border-style: solid;
   border-width:1px;
   border-color:HSLA(10, 8%, 85%, 1);
-  /* position:relative; */
-  @include omega(3n);
+
+/*   @include omega(3n); */
   margin-top:30px;
+  overflow:auto;
 
     header{
       display:block;
@@ -100,16 +100,15 @@ body {
         display:inline-block;
       }
     }
-    div{
+    p{
       display:block;
       padding:10px;
-      position:absolute;
-      @include span-columns(3);
+
 
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
-      /* height:100%; */
+
 
     }
 
