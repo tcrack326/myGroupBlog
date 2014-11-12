@@ -5,7 +5,9 @@
       '' : 'home',
       'login' : 'userLogin',
       'signup' : 'userSignUp',
-      'newpost': 'newPost'
+      'newpost': 'newPost',
+      'post/:id' : 'post',
+      'edit/:id' : 'editPost'
     },
 
 
@@ -20,6 +22,16 @@
     },
     newPost:function(){
       new App.Views.AddPost();
+    },
+
+    post: function(id) {
+      var readPost = App.all_posts.get(id);
+      new App.Views.ReadPost({ post: readPost });
+    },
+
+    edit: function(id) {
+      var editPost = App.all_posts.get(id);
+      new App.Views.EditPost({ post: editPost });
     }
 
 

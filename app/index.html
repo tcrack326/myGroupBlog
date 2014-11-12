@@ -75,6 +75,22 @@
         </form>
     </script>
 
+    <script type="text/template" id="editPostTemp">
+        <form class="idForm" id="editPostForm">
+          <input id="editPostTitle"type="text" placeholder="Title" value="<%= title %>">
+          <input id="editPostCategory"type="text" placeholder="Category" value="<%= category %>">
+          <textarea id="editPostContent" type="text" placeholder="Content" value="<%= content %>"/>
+          <button id="editPostSubmit">submit</button>
+        </form>
+    </script>
+
+    <script type="text/template" id="readPostTemp">
+        <h1><%= title %></h1>
+        <p><%= content %></p>
+        <p><%= category %></p>
+    </script>
+
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -97,6 +113,8 @@
         <script src="scripts/views/home_view.js"></script>
         <script src="scripts/views/signup_view.js"></script>
         <script src="scripts/views/add_post_view.js"></script>
+        <script src="scripts/views/single_view.js"></script>
+        <script src="scripts/views/edit_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/collections/post_collection.js"></script>
