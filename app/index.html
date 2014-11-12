@@ -22,34 +22,36 @@
     <!-- endbuild -->
   </head>
   <body>
-
-    <div class = "container">
-      <header>
-          <a href=''><h1>Hollar</h1></a>
+    <header>
+        <a href=''><h1>Hollar</h1></a>
         <a href='#/login'><button id="loginBtn"> Login </button></a>
-      </header>
-
+        <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
+    </header>
+    <div class = "container">
       <div id="viewContainer">
 
         <ul id="listOfPosts"></ul>
+
       </div>
-
-
-
-
     </div>
 
     <script id="postTemp" type="text/template">
 
         <li>
-          <h2><%= title %></h2>
-          <p><%= content %></p>
-          <span><%= category %></span>
+        <div class="card">
+          <div class="card-header">
+            <%= title %>
+          </div>
+          <div class="card-copy">
+            <p><%= content %></p>
+          </div>
+          <div class="card-stats">
+          </div>
+        </div>
         </li>
     </script>
 
     <script type="text/template" id="loginTemp">
-          <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
           <form id="loginForm">
             <input id="username"type="text" placeholder="Username">
             <input id="password"type="password" placeholder="Password" >
