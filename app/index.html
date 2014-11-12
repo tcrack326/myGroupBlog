@@ -23,7 +23,7 @@
   </head>
   <body>
     <header>
-        <a href=''><h1>Hollar</h1></a>
+        <a href=''><h1>HOLLER</h1></a>
         <a href='#/login'><button id="loginBtn"> Login </button></a>
         <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
     </header>
@@ -37,22 +37,16 @@
 
     <script id="postTemp" type="text/template">
 
-        <li>
-        <div class="card">
-          <div class="card-header">
-            <%= title %>
-          </div>
-          <div class="card-copy">
-            <p><%= content %></p>
-          </div>
-          <div class="card-stats">
-          </div>
-        </div>
+        <li class="posts">
+            <header><span><%= title %></span></header>
+            <div>
+              <p> <%= content  %></p>
+            </div>
         </li>
     </script>
 
     <script type="text/template" id="loginTemp">
-          <form id="loginForm">
+          <form class="idForm" id="loginForm">
             <input id="username"type="text" placeholder="Username">
             <input id="password"type="password" placeholder="Password" >
             <button id="loginSubmit">submit</button>
@@ -61,7 +55,7 @@
 
 
     <script type="text/template" id="signUpTemp">
-        <form id="signUpForm">
+        <form class="idForm" id="signUpForm">
           <input id="usernameNew"type="text" placeholder="Username">
           <input id="passwordNew"type="password" placeholder="Password">
           <input id="emailNew" type="email" placeholder="e-mail">
