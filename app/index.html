@@ -22,7 +22,7 @@
     <!-- endbuild -->
   </head>
   <body>
-    <header>
+    <header id="topHeader">
         <a href=''><h1>HOLLER</h1></a>
         <a href='#/login'><button id="loginBtn"> Login </button></a>
         <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
@@ -64,6 +64,15 @@
     </script>
 
 
+    <script type="text/template" id="newPostTemp">
+        <form class="idForm" id="newPostForm">
+          <input id="newPostTitle"type="text" placeholder="Title">
+          <input id="newPostCategory"type="text" placeholder="Category">
+          <textarea id="newPostContent" type="text" placeholder="Content"/>
+          <button id="newPostSubmit">submit</button>
+        </form>
+    </script>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -85,6 +94,7 @@
         <script src="scripts/views/login_view.js"></script>
         <script src="scripts/views/home_view.js"></script>
         <script src="scripts/views/signup_view.js"></script>
+        <script src="scripts/views/add_post_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/collections/post_collection.js"></script>

@@ -4,7 +4,8 @@
     routes:{
       '' : 'home',
       'login' : 'userLogin',
-      'signup' : 'userSignUp'
+      'signup' : 'userSignUp',
+      'newpost': 'newPost'
     },
 
 
@@ -16,6 +17,9 @@
     },
     userSignUp: function(){
       new App.Views.Signup();
+    },
+    newPost:function(){
+      new App.Views.AddPost();
     }
 
 

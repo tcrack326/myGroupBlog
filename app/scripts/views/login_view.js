@@ -24,7 +24,9 @@
         success: function(user){
           App.user  = user;
           App.router.navigate('',{ trigger: true });
-
+        },
+        error: function(user){
+          alert("Username or password not found.")
         }
       });
 

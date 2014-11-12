@@ -9,24 +9,29 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   @include outer-container;
+   /* background:url(../images/1.jpg);  */
 }
 
 #container{
   @include span-columns (8);
   @include shift(2);
+  overflow:auto;
 
   #viewContainer{
+    @include span-columns (12);
     overflow:auto;
     text-align:center;
 
 
     .postList{
       overflow:auto;
+      display:block;
+
     }
   }
 }
 
-header{
+#topHeader{
   display:block;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -59,6 +64,13 @@ header{
     margin-left: auto;
     margin-right: auto;
   }
+  textarea{
+    display: block;
+    padding: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   button{
     display: block;
     float: right;
@@ -70,135 +82,37 @@ header{
 .posts{
   display:block;
   @include span-columns(4);
+  height:250px;
+  border-style: solid;
+  border-width:1px;
+  border-color:HSLA(10, 8%, 85%, 1);
+  /* position:relative; */
+  @include omega(3n);
+  margin-top:30px;
 
-  span{
-    display:inline-block;
-  }
-  div{
-    display:block;
-  }
+    header{
+      display:block;
+      /* margin-top: 5px; */
+      margin-bottom: 5px;
+      background-color:HSLA(10, 8%, 85%, 1);
+      padding:10px;
+      span{
+        display:inline-block;
+      }
+    }
+    div{
+      display:block;
+      padding:10px;
+      position:absolute;
+      @include span-columns(3);
+
+      /* border-style:solid; */
+      overflow:auto;
+      overflow-y: hidden;
+      /* height:100%; */
+
+    }
+
+
 
 }
-
-  /* .card {
-
-    \$card-border-color: \$base-border-color;
-    \$card-border: 1px solid \$card-border-color;
-    \$card-background: lighten(\$card-border-color, 10);
-    \$card-header-background: \$card-background;
-    \$card-hover-background: lighten(\$card-background, 5);
-    \$card-image-background: #DBD199;
-    \$card-image-hover-background: lighten(\$card-image-background, 5);
-    \$card-stats-color: lighten(\$base-accent-color, 10);
-
-    @include transition (all 0.2s ease-in-out);
-    background-color: \$card-background;
-    border-radius: \$base-border-radius;
-    border: \$card-border;
-    margin-bottom: \$base-spacing;
-    cursor: pointer;
-    box-shadow: 0 2px 4px darken(\$base-background-color, 10);
-    position: relative;
-    width:100%;
-
-    @include media(\$large-screen) {
-      @include span-columns(4);
-      @include omega(3n);
-    }
-
-
-
-    .ribbon-wrapper {
-      \$ribbon-size: 85px;
-      \$ribbon-background: \$base-accent-color;
-      @include size(\$ribbon-size);
-      overflow: hidden;
-      position: absolute;
-      top: -1px;
-      right: -1px;
-
-      .ribbon {
-        font-size: .8em;
-        font-weight: 800;
-        text-align: center;
-        @include transform(rotate(45deg));
-        position: relative;
-        padding: 2px 7px;
-        left: -5px;
-        top: 15px;
-        width: 120px;
-        background-color: \$ribbon-background;
-        color: white;
-        box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-      }
-    }
-
-    .card-header {
-      @include transition (all 0.2s ease-in-out);
-      background-color: \$card-header-background;
-      border-bottom: \$card-border;
-      border-radius: \$base-border-radius \$base-border-radius 0 0;
-      font-weight: bold;
-      padding: \$base-spacing/3 \$gutter/2;
-    }
-
-    .card-copy {
-      padding: \$base-spacing/2 \$gutter/2;
-      font-size: .9em;
-      line-height: 1.5em;
-      overflow:hidden;
-    }
-
-    .card-stats {
-      padding: \$base-spacing/2 \$gutter/2;
-      overflow: auto;
-
-      ul li {
-        display: inline;
-        color: \$card-stats-color;
-        font-weight: 800;
-        font-size: 1.2em;
-        float: left;
-        border-right: 1px solid transparentize(\$base-font-color, .8);
-        line-height: 1.1em;
-        padding: 0 .7em 0 .7em;
-
-        &:first-child {
-          padding-left: 0;
-        }
-
-        &:last-child {
-          border-right: 0;
-        }
-
-        span {
-          color: \$base-font-color;
-          font-size: .7em;
-          display: block;
-          font-weight: normal;
-        }
-      }
-    }
-
-    &:hover {
-      background-color: \$card-hover-background;
-
-      .card-image img {
-        background: \$card-image-hover-background;
-      }
-
-      .card-header {
-        background-color: \$card-hover-background;
-      }
-    }
-
-    &:active {
-      background-color: \$card-background;
-
-      .card-header {
-        background-color: \$card-background;
-      }
-    }
-  }
-   }
-*/
