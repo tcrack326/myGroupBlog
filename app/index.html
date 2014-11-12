@@ -24,7 +24,11 @@
   <body>
 
     <div class = "container">
-      <header><h1>Hollar</h1><button id="loginBtn"> Login </button></header>
+      <header>
+          <a href=''><h1>Hollar</h1></a>
+        <a href='#/login'><button id="loginBtn"> Login </button></a>
+      </header>
+
       <div id="viewContainer">
 
         <ul id="listOfPosts"></ul>
@@ -45,7 +49,7 @@
     </script>
 
     <script type="text/template" id="loginTemp">
-          <button id="signUpBtn"> Signup </button>
+          <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
           <form id="loginForm">
             <input id="username"type="text" placeholder="Username">
             <input id="password"type="password" placeholder="Password" >
