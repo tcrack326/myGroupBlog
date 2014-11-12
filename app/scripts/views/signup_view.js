@@ -36,6 +36,7 @@
           App.user = user;
           console.log('3');
           App.router.navigate('', { trigger: true});
+          App.updateUser();
         }
       });
     }

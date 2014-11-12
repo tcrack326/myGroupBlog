@@ -14,5 +14,32 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
     Parse.history.start();
     //console.log('3');
 
+  $('#logoutBtn').hide();
+
+  $('#logoutBtn').on('click', function () {
+      Parse.User.logOut();
+      $('#signUpBtn').show();
+      $('#loginBtn').show();
+      $('#logoutBtn').hide();
+
+  });
+
+
+    App.updateUser = function () {
+      App.user = Parse.User.current();
+      var currentUser;
+      if (App.user === null){
+        currentUser = '';
+      }
+      else {
+        currentUser = App.user.attributes.username;
+        $('#signature').text('User: ' + currentUser);
+        $('#signUpBtn').hide();
+        $('#loginBtn').hide();
+        $('#logoutBtn').show();
+      }
+    };
+
+
   });
 }());
