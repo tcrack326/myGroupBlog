@@ -13,7 +13,7 @@
 
     render: function () {
 
-      this.$el.template(this.template(this.options.post.toJSON()));
+      this.$el.html(this.template(this.options.post.toJSON()));
     }
   });
 

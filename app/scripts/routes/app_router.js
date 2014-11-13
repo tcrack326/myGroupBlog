@@ -25,8 +25,8 @@
     },
 
     singlePost: function(id) {
-      var readPost = App.all_posts.get(id);
-      new App.Views.ReadPost({ post: readPost , collection: App.all_posts});
+      var singlePost = App.all_posts.get(id);
+      new App.Views.ReadPost({ post: singlePost , collection: App.all_posts});
     },
 
     edit: function(id) {

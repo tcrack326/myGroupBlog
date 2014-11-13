@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -83,10 +84,14 @@
         </form>
     </script>
 
-    <script type="text/template" id="readPostTemp">
-        <h1><%= title %></h1>
-        <p><%= content %></p>
-        <p><%= category %></p>
+    <script type="text/template"  id="readPostTemp">
+        <div class='singlePost'>
+        <header>
+              <span><%= title %></span>
+        </header>
+        <p> <%= content  %></p>
+        <p>categories: <%= category %></p>
+        </div>
     </script>
 
 

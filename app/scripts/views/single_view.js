@@ -2,21 +2,23 @@
 
   App.Views.ReadPost = Parse.View.extend({
 
-    template: $('#readPostTemp').html(),
+    template: _.template($('#readPostTemp').html()),
 
     initialize: function (options) {
       this.options = options;
       this.render();
-
-      $('viewContainer').html(this.$el);
+      $('#viewContainer').html(this.$el);
     },
 
     render: function () {
-      this.$el.html(this.template);
+      var self = this;
+      //this.$el.html(this.template);
       this.$el.html(this.template(this.options.post.toJSON()));
 
-      var postQuery = new Parse.Query(App.Model.PostModel)
-      postQuery.equalTo('parent',this.options.post)
+      // var postQuery = new Parse.Query(App.Models .PostModel);
+      // postQuery.equalTo('author',this.options.post)
+      //
+      // console.log(postQuery);
 
     }
   });

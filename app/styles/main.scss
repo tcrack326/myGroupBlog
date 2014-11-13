@@ -5,7 +5,7 @@
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background:HSLA(199, 48%, 86%, 1);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   @include outer-container;
@@ -34,10 +34,11 @@ body {
   display:block;
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color:HSLA(10, 8%, 85%, 1);
+  background-color:HSLA(197, 55%, 57%, 1);
   padding:10px;
   /* background:url(../images/wood.jpg); */
   h1{
+    font-family: 'Chango', cursive;
     display:inline-block;
     text-align:center;
     color:white;
@@ -48,6 +49,7 @@ body {
       margin-bottom:10px;
       margin-left:10px;
       background-color:HSLA(0, 0%, 33%, 1);
+      border-radius:20px;
     }
 }
 
@@ -81,6 +83,41 @@ body {
 .posts{
   display:block;
   @include span-columns(4);
+  height:250px;
+  border-style: solid;
+  border-width:1px;
+  border-color:HSLA(197, 55%, 57%, 1);
+  margin-top:30px;
+  overflow:auto;
+  background-color:white;
+  border-radius:15px;
+    header{
+      font-family: 'Chango', cursive;
+      color:white;
+      display:block;
+      /* margin-top: 5px; */
+      margin-bottom: 5px;
+      background-color:HSLA(197, 55%, 57%, 1);
+      padding:10px;
+      overflow:auto;
+      span{
+        display:inline-block;
+        float:left;
+      }
+    }
+    p{
+      display:block;
+      padding:10px;
+      /* border-style:solid; */
+      overflow:auto;
+      overflow-y: hidden;
+    }
+}
+
+
+.singlePost{
+  display:block;
+  @include span-columns(12);
   height:250px;
   border-style: solid;
   border-width:1px;
