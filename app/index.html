@@ -38,13 +38,12 @@
     </div>
 
     <script id="postTemp" type="text/template">
-
-        <li class="posts">
-            <header><span><%= title %></span></header>
-
+        <a href="#/singlePost/<%= objectId %>"<li class="posts">
+            <header>
+                  <span><%= title %></span>
+            </header>
               <p> <%= content  %></p>
-
-        </li>
+        </li></a>
     </script>
 
     <script type="text/template" id="loginTemp">

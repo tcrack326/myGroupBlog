@@ -11,8 +11,13 @@
       $('viewContainer').html(this.$el);
     },
 
-    render: function (post) {
+    render: function () {
       this.$el.html(this.template);
+      this.$el.html(this.template(this.options.post.toJSON()));
+
+      var postQuery = new Parse.Query(App.Model.PostModel)
+      postQuery.equalTo('parent',this.options.post)
+
     }
   });
 

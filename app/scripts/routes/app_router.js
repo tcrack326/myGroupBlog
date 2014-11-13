@@ -6,7 +6,7 @@
       'login' : 'userLogin',
       'signup' : 'userSignUp',
       'newpost': 'newPost',
-      'post/:id' : 'post',
+      'singlePost/:id' : 'singlePost',
       'edit/:id' : 'editPost'
     },
 
@@ -24,9 +24,9 @@
       new App.Views.AddPost();
     },
 
-    post: function(id) {
+    singlePost: function(id) {
       var readPost = App.all_posts.get(id);
-      new App.Views.ReadPost({ post: readPost });
+      new App.Views.ReadPost({ post: readPost , collection: App.all_posts});
     },
 
     edit: function(id) {
