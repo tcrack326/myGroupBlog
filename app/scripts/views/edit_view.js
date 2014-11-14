@@ -7,11 +7,12 @@
     initialize: function (options) {
       this.options = options;
       this.render();
+
+
       $('#viewContainer').html(this.$el);
     },
 
     render: function () {
-
       this.$el.html(this.template(this.options.post.toJSON()));
     }
   });

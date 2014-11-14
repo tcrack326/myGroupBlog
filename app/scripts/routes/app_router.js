@@ -30,9 +30,9 @@
       new App.Views.ReadPost({ post: singlePost , collection: App.all_posts});
     },
 
-    edit: function(id) {
+    editPost: function(id) {
       var editPost = App.all_posts.get(id);
-      new App.Views.EditPost({ post: editPost });
+      new App.Views.EditPost({post: editPost});
     }
 
 
