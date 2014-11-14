@@ -19,7 +19,7 @@ body {
   #viewContainer{
     @include span-columns (12);
     overflow:auto;
-    text-align:center;
+
 
 
     .postList{
@@ -108,6 +108,7 @@ body {
     p{
       display:block;
       padding:10px;
+      color:HSLA(197, 55%, 57%, 1);
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
