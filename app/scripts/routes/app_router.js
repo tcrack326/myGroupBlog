@@ -1,7 +1,7 @@
 (function(){
   App.Routers.BlogRouter = Parse.Router.extend({
 
-    routes:{
+    routes: {
       '' : 'home',
       'login' : 'userLogin',
       'signup' : 'userSignUp',
@@ -30,7 +30,7 @@
       new App.Views.ReadPost({ post: singlePost , collection: App.all_posts});
     },
 
-    edit: function(id) {
+    editPost: function(id) {
       var editPost = App.all_posts.get(id);
       new App.Views.EditPost({ post: editPost });
     }

@@ -14,33 +14,63 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
     Parse.history.start();
     //console.log('3');
 
-  $('#logoutBtn').hide();
+  //$('#logoutBtn').hide();
 
-  $('#logoutBtn').on('click', function () {
+
+
+
+  });
+
+  $('#logoutBtn').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
       Parse.User.logOut();
-      $('#signUpBtn').show();
-      $('#loginBtn').show();
-      $('#logoutBtn').hide();
-
+      console.log(Parse.User.current());
+      $('#addPostBtn').text('Signup');
+      $('#addPostBtn').attr('id', 'signUpBtn');
+      $('#logoutBtn').text('Login');
+      $('#logoutBtn').attr('id', 'loginBtn');
+      App.updateUser();
+      App.router.navigate('', { trigger: true });
   });
 
-
-    App.updateUser = function () {
-      App.user = Parse.User.current();
-      var currentUser;
-      if (App.user === null){
-        currentUser = '';
-      }
-      else {
-        currentUser = App.user.attributes.username;
-        $('#signature').text('User: ' + currentUser);
-        $('#signUpBtn').hide();
-        $('#loginBtn').hide();
-        $('#logoutBtn').show();
-      }
-    };
-    App.updateUser();
-
-
+  $('#loginBtn').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      App.router.navigate('login', { trigger: true });
+      App.updateUser();
   });
+
+  // $('#signUpBtn').on('click', function (e) {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     App.router.navigate('signup', { trigger: true });
+  //     App.updateUser();
+  // });
+  //
+  // $('#addPostBtn').on('click', function () {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     App.router.navigate('newpost', { trigger: true });
+  // });
+
+
+  App.updateUser = function () {
+    App.user = Parse.User.current();
+    var currentUser;
+    if (App.user === null){
+      currentUser = '';
+      $('#signature').text('');
+    }
+    else {
+      currentUser = App.user.attributes.username;
+      $('#signature').text('User: ' + currentUser);
+      $('#signUpBtn').text('Add New Post');
+      $('#signUpBtn').attr('id', 'addPostBtn');
+      $('#loginBtn').text('Logout');
+      $('#loginBtn').attr('id', 'logoutBtn');
+
+    }
+  }
+
 }());

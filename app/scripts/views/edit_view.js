@@ -6,12 +6,13 @@
 
     initialize: function (options) {
       this.options = options;
+      console.log(this.options.post.toJSON());
       this.render();
+      console.log(this.options.post.toJSON());
       $('#viewContainer').html(this.$el);
     },
 
     render: function () {
-
       this.$el.html(this.template(this.options.post.toJSON()));
     }
   });

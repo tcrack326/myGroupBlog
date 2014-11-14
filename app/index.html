@@ -25,9 +25,8 @@
   <body>
     <header id="topHeader">
         <a href=''><h1>HOLLER</h1></a>
-        <a href='#/login'><button id="loginBtn"> Login </button></a>
-        <a href="#/signup"><button id="signUpBtn"> Signup </button></a>
-        <a href=''><button id="logoutBtn"> Logout </button></a>
+        <button id="loginBtn"> Login </button>
+        <button id="signUpBtn"> Signup </button>
         <span id="signature"></span>
     </header>
     <div class = "container">
@@ -80,7 +79,8 @@
           <input id="editPostTitle"type="text" placeholder="Title" value="<%= title %>">
           <input id="editPostCategory"type="text" placeholder="Category" value="<%= category %>">
           <textarea id="editPostContent" type="text" placeholder="Content" value="<%= content %>"/>
-          <button id="editPostSubmit">submit</button>
+          <button id="editPostSubmit">Update Post</button>
+          <button id="deletePost">Delete Post</button>
         </form>
     </script>
 
