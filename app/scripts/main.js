@@ -41,12 +41,12 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
       App.updateUser();
   });
 
-  // $('#signUpBtn').on('click', function (e) {
-  //     e.preventDefault();
-  //     e.stopPropagation();
-  //     App.router.navigate('signup', { trigger: true });
-  //     App.updateUser();
-  // });
+  $('#signUpBtn').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      App.router.navigate('signup', { trigger: true });
+      App.updateUser();
+  });
   //
   // $('#addPostBtn').on('click', function () {
   //     e.preventDefault();
