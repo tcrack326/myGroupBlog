@@ -39,6 +39,7 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
         $('#logoutBtn').show();
       }
     };
+    App.updateUser();
 
 
   });

@@ -12,6 +12,7 @@
 
 
     home: function () {
+
       new App.Views.HomeView({collection: App.all_posts});
     },
     userLogin: function () {
