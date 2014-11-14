@@ -5,7 +5,7 @@
 
 // Custom Styles
 body {
-  background:HSLA(199, 48%, 86%, 1);
+  background:url('http://picvenue.com/wp-content/uploads/2014/08/woods-hd-desktop-wallpaper.jpg');
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   @include outer-container;
@@ -34,7 +34,7 @@ body {
   display:block;
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color:HSLA(197, 55%, 57%, 1);
+  background-color:HSLA(240, 1%, 35%, 1);
   padding:10px;
   /* background:url(../images/wood.jpg); */
   h1{
@@ -48,7 +48,7 @@ body {
       float:right;
       margin-bottom:10px;
       margin-left:10px;
-      background-color:HSLA(0, 0%, 33%, 1);
+      background-color:HSLA(0, 0%, 2%, 1);
       border-radius:20px;
     }
 }
@@ -82,22 +82,26 @@ body {
 
 .posts{
   display:block;
-  @include span-columns(4);
-  height:250px;
+  @include span-columns(12);
+  height:110px;
   border-style: solid;
   border-width:1px;
-  border-color:HSLA(197, 55%, 57%, 1);
+  border-color:HSLA(240, 1%, 35%, 1);;
   margin-top:30px;
   overflow:auto;
   background-color:white;
-  border-radius:15px;
+  opacity:.7;
+/*   border-radius:15px; */
+  &:hover{
+    opacity:.9;
+  }
     header{
       font-family: 'Chango', cursive;
       color:white;
       display:block;
       /* margin-top: 5px; */
       margin-bottom: 5px;
-      background-color:HSLA(197, 55%, 57%, 1);
+      background-color:HSLA(240, 1%, 35%, 1);
       padding:10px;
       overflow:auto;
       span{
@@ -108,7 +112,7 @@ body {
     p{
       display:block;
       padding:10px;
-      color:HSLA(197, 55%, 57%, 1);
+      color:HSLA(240, 1%, 35%, 1);
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
