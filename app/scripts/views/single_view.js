@@ -11,7 +11,7 @@
     },
 
     render: function () {
-      var self = this;
+      // var self = this;
       //this.$el.html(this.template);
       this.$el.html(this.template(this.options.post.toJSON()));
 

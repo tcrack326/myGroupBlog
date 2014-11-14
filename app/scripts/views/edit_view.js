@@ -7,7 +7,6 @@
     initialize: function (options) {
       this.options = options;
       this.render();
-
       $('#viewContainer').html(this.$el);
     },
 
@@ -16,6 +15,4 @@
       this.$el.html(this.template(this.options.post.toJSON()));
     }
   });
-
-
 }());
