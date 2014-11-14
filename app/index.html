@@ -91,9 +91,11 @@
 
     <script type="text/template" id="editPostTemp">
         <form class="idForm" id="editPostForm">
+
           <input id="editPostTitle" type="text" placeholder="Title" value="<%= title %>">
           <input id="editPostCategory" type="text"  value="<%= category[0] %>"/>
           <textarea id="editPostContent"><%= content %></textarea>
+
           <button id="editPostSubmit">Update Post</button>
           <button id="deletePost">Delete Post</button>
         </form>
