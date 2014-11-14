@@ -28,11 +28,8 @@
       this.options.post.set({
         title: $('#editPostTitle').val(),
         content: $('#editPostContent').val(),
-<<<<<<< HEAD
-        
-=======
-        category:[]
->>>>>>> f7ff0bd9b4f57d9be6cddc659339b4b29e8a5435
+        category : $("#editPostCategory").val().replace(" ", '');
+
       });
 
       console.log('edit' + this);
