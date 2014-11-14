@@ -12,7 +12,11 @@
 
 
     home: function () {
-
+      if(App.user){
+        new App.Views.ActiveHeader();
+      }else{
+        new App.Views.GuestHeader();
+      };
       new App.Views.HomeView({collection: App.all_posts});
     },
     userLogin: function () {

@@ -37,6 +37,21 @@
       </div>
     </div>
 
+
+    <script id='userHeaderTemp' type='text/template'>
+      <a href=''><h1>HOLLER</h1></a>
+      <a href=''><button id="logOutBtn"> Log Out </button></a>
+      <a href='#/newpost'><button id="newPost"> New Post</button></a>
+      <span id="signature"></span>
+    </script>
+
+    <script id='guestHeaderTemp' type='text/template'>
+      <a href=''><h1>HOLLER</h1></a>
+      <a href="#/login"><button id="loginBtn"> Login </button></a>
+      <a href='#/signup'><button id="signUpBtn"> Signup </button></a>
+      <span id="signature"></span>
+    </script>
+
     <script id="postTemp" type="text/template">
         <a href="#/singlePost/<%= objectId %>"<li class="posts">
             <header>
@@ -120,6 +135,8 @@
         <script src="scripts/views/add_post_view.js"></script>
         <script src="scripts/views/single_view.js"></script>
         <script src="scripts/views/edit_view.js"></script>
+        <script src="scripts/views/guest_header_view.js"></script>
+        <script src="scripts/views/active_user_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/collections/post_collection.js"></script>
