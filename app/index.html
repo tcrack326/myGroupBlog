@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <link href='http://fonts.googleapis.com/css?family=Chango' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>    <!-- build:css styles/main.css -->
 
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -65,7 +64,7 @@
           <form class="idForm" id="loginForm">
             <input id="username"type="text" placeholder="Username">
             <input id="password"type="password" placeholder="Password" >
-            <button id="loginSubmit">submit</button>
+            <button id="loginSubmit">Submit</button>
           </form>
     </script>
 
@@ -75,7 +74,7 @@
           <input id="usernameNew"type="text" placeholder="Username">
           <input id="passwordNew"type="password" placeholder="Password">
           <input id="emailNew" type="email" placeholder="e-mail">
-          <button id="signUpSubmit">submit</button>
+          <button id="signUpSubmit">Submit</button>
         </form>
     </script>
 
@@ -85,7 +84,7 @@
           <input id="newPostTitle"type="text" placeholder="Title">
           <input id="newPostCategory"type="text" placeholder="Category">
           <textarea id="newPostContent" type="text" placeholder="Content"/>
-          <button id="newPostSubmit">submit</button>
+          <button id="newPostSubmit">Submit</button>
         </form>
     </script>
 
@@ -93,8 +92,8 @@
         <form class="idForm" id="editPostForm">
 
           <input id="editPostTitle" type="text" placeholder="Title" value="<%= title %>">
-          <input id="editPostCategory" type="text"  value="<%= category[0] %>"/>
-          <textarea id="editPostContent"><%= content %></textarea>
+          <input id="editPostCategory" type="text" placeholder="Category" value="<%= category[0] %>"/>
+          <textarea id="editPostContent" placeholder="Content"><%= content %></textarea>
 
           <button id="editPostSubmit">Update Post</button>
           <button id="deletePost">Delete Post</button>

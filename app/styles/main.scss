@@ -15,33 +15,36 @@ body {
 .container{
   @include span-columns (12);
   overflow:auto;
+  background-color:HSLA(0, 0%, 2%, .6);
 
   #viewContainer{
     @include span-columns (12);
     overflow:auto;
-
-
-
+    }
     .postList{
       overflow:auto;
       display:block;
+      margin:10px;
 
     }
   }
-}
+
 
 #topHeader{
   display:block;
   margin-top: 5px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   background-color:HSLA(240, 1%, 35%, 1);
   padding:10px;
   /* background:url(../images/wood.jpg); */
   h1{
-    font-family: 'Chango', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     display:inline-block;
     text-align:center;
     color:white;
+      &:hover{
+        color:HSLA(52, 83%, 57%, 1);
+      }
     }
     button{
       display:block;
@@ -50,6 +53,11 @@ body {
       margin-left:10px;
       background-color:HSLA(0, 0%, 2%, 1);
       border-radius:20px;
+      font-family: 'Josefin Sans', sans-serif;
+      &:hover{
+        color:HSLA(52, 83%, 57%, 1);
+      }
+
     }
 }
 
@@ -57,6 +65,7 @@ body {
   display: block;
   margin-top: 60px;
   padding:10px;
+
 
   input{
     display: block;
@@ -71,11 +80,19 @@ body {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    min-height: 250px;
   }
   button{
-    display: block;
-    float: right;
-    background-color: HSLA(0, 0%, 33%, 1);
+  display:block;
+    float:right;
+    margin-bottom:10px;
+    margin-left:10px;
+    background-color:HSLA(0, 0%, 2%, 1);
+    border-radius:20px;
+    font-family: 'Josefin Sans', sans-serif;
+    &:hover{
+      color:HSLA(52, 83%, 57%, 1);
+    }
   }
 }
 
@@ -91,13 +108,16 @@ body {
   overflow:hidden;
   background-color:white;
   opacity:.7;
-/*   border-radius:15px; */
+  color:white;
   &:hover{
-    opacity:.9;
+    opacity:1;
+    color:HSLA(52, 83%, 57%, 1);
+
+
   }
     header{
-      font-family: 'Chango', cursive;
-      color:white;
+      font-family: 'Josefin Sans', sans-serif;
+
       display:block;
       /* margin-top: 5px; */
       margin-bottom: 5px;
@@ -126,7 +146,7 @@ body {
   //height:250px;
   border-style: solid;
   border-width:1px;
-  border-color:HSLA(10, 8%, 85%, 1);
+  border-color:HSLA(240, 1%, 35%, 1);
   background-color:white;
 /*   @include omega(3n); */
   margin-top:30px;
@@ -136,24 +156,29 @@ body {
       display:block;
       /* margin-top: 5px; */
       margin-bottom: 5px;
-      background-color:HSLA(10, 8%, 85%, 1);
+      background-color:HSLA(240, 1%, 35%, 1);
       padding:10px;
       span{
         display:inline-block;
+        color:white;
       }
     }
     p{
       display:block;
       padding:10px;
-
-
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
-
-
     }
-
-
-
+    button{
+      display:block;
+        float:right;
+        margin:10px;
+        background-color:HSLA(0, 0%, 2%, 1);
+        border-radius:20px;
+        font-family: 'Josefin Sans', sans-serif;
+        &:hover{
+          color:HSLA(52, 83%, 57%, 1);
+        }
+    }
 }
