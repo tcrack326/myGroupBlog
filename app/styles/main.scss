@@ -20,6 +20,7 @@ body {
   #viewContainer{
     @include span-columns (12);
     overflow:auto;
+    padding:10px;
     }
     .postList{
       overflow:auto;
@@ -136,6 +137,7 @@ body {
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
+
     }
 }
 
@@ -161,6 +163,7 @@ body {
       span{
         display:inline-block;
         color:white;
+        font-size: 2em;
       }
     }
     p{
@@ -169,6 +172,9 @@ body {
       /* border-style:solid; */
       overflow:auto;
       overflow-y: hidden;
+    }
+    .bold{
+      font-weight:bold;
     }
     button{
       display:block;
