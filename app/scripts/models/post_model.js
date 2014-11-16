@@ -8,7 +8,7 @@
     defaults:{
       title:'',
       content:'',
-      category:[],
+      category:'',
     },
 
 

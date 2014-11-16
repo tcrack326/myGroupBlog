@@ -7,17 +7,18 @@
       'signup' : 'userSignUp',
       'newpost': 'newPost',
       'singlePost/:id' : 'singlePost',
-      'edit/:id' : 'editPost'
+      'edit/:id' : 'editPost',
+      'sort/:category':'home'
     },
 
 
-    home: function () {
+    home: function (category) {
       if(App.user){
         new App.Views.ActiveHeader();
       }else{
         new App.Views.GuestHeader();
       };
-      new App.Views.HomeView({collection: App.all_posts});
+      new App.Views.HomeView({collection: App.all_posts, sort: category});
     },
     userLogin: function () {
       new App.Views.Login();

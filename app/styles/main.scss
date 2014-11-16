@@ -173,8 +173,10 @@ body {
       overflow:auto;
       overflow-y: hidden;
     }
-    .bold{
-      font-weight:bold;
+    footer{
+      display:inline-block;
+      margin:10px
+    }
     }
     button{
       display:block;
@@ -187,4 +189,3 @@ body {
           color:HSLA(52, 83%, 57%, 1);
         }
     }
-}

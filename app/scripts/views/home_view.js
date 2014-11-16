@@ -19,11 +19,13 @@ App.Views.HomeView = Parse.View.extend({
 
   render:function(){
       var self = this;
-      this.collection.each(function(post){
-        self.$el.append(self.template(post.toJSON()));
-        console.log('in home render');
 
-      });
+      var localCollection = this.collection;
+      if (this.options.sort != undefined) {
+        // Setting up a localized collection to sort by our sort param
+         local_collection = _.sortBy(this.collection, function (model){
+          return model[self.options.sort];
+        });
 
 
   }
