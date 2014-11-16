@@ -28,7 +28,7 @@
       this.options.post.set({
         title: $('#editPostTitle').val(),
         content: $('#editPostContent').val(),
-        category:[]
+        category:$('#editPostCategory').val().split(" "),
       });
 
       console.log('edit' + this);
