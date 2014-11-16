@@ -102,13 +102,28 @@
 
     <script type="text/template"  id="readPostTemp">
         <div class='singlePost'>
-        <header>
+          <header>
               <span><%= title %></span>
-        </header>
-        <p> <%= content  %></p>
-        <footer>Category:<a href="#/sort/<%= category %>"><%= category %></a></footer>
-        <a href="#/edit/<%= objectId %>"><button id="editBtn">Edit</button></a>
+
+          </header>
+          <p> <%= content  %></p>
+          <p class="bold">categories: <%= category %></p>
+          <a href="#/edit/<%= objectId %>"><button id="editBtn">Edit</button></a>
+          <div id="commentsContainer">
+            <ul id="commentsList">
+            </ul>
+            <textarea id="commentArea" placeholder="Place your comments here"></textarea>
+            <button id="addCommentBtn">Add Comment </button>
+          </div>
+
         </div>
+    </script>
+
+    <script type="text/template" id="commentTemp">
+      <li>
+      <span><%= author.attributes.username %> said: </span>
+        <p><%= content %></p>
+      </li>
     </script>
 
 
@@ -140,7 +155,9 @@
         <script src="scripts/views/active_user_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
+        <script src="scripts/models/comment_model.js"></script>
         <script src="scripts/collections/post_collection.js"></script>
+        <script src="scripts/collections/comments_collection.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

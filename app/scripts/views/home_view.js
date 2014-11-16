@@ -12,6 +12,9 @@ App.Views.HomeView = Parse.View.extend({
 
     this.options = options;
 
+      this.collection.off();
+      this.collection.on('sync', this.collection, this);
+
     this.render();
 
     $('#viewContainer').html(this.$el);

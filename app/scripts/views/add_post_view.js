@@ -8,7 +8,7 @@
     template: $('#newPostTemp').html(),
 
     initialize:function(){
-      console.log("routed to new post temp");
+      
       this.render();
 
       $('#viewContainer').html(this.$el);
