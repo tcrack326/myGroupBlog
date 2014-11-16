@@ -6,6 +6,7 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
 
   App.all_posts = new App.Collections.PostCollection();
   App.all_comments = new App.Collections.CommentCollection();
+  App.all_comments.fetch();
 
   App.all_posts.fetch().done(function(){
 

@@ -13,9 +13,7 @@
 
 
    initialize: function () {
-      var title = this.get('title');
-      console.log(title + " was submitted");
-
+      
     }
   });
 }());

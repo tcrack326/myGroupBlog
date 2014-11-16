@@ -7,15 +7,15 @@
     },
 
     template: _.template($('#readPostTemp').html()),
+    commentTemplate: _.template($('#commentTemp').html()),
 
     initialize: function (options) {
-      this.commentQuery();
-      console.log(this.commentsCollection);
       this.options = options;
       this.render();
       $('#viewContainer').html(this.$el);
 
       //Hide the edit button if the author is different than the user
+      //Hide comment area if not logged in
       App.user = Parse.User.current();
       if (App.user === null){
         $('#editBtn').hide();
@@ -25,9 +25,11 @@
 
       else if (App.user.id != this.options.post.attributes.author.id){
          $('#editBtn').hide();
-         $('#commentArea').hide();
-         $('#addCommentBtn').hide();
       }
+
+      //Add the comments to the post
+      this.commentQuery();
+
     },
 
     render: function () {
@@ -36,6 +38,8 @@
 
 
       this.$el.html(this.template(this.options.post.toJSON()));
+
+
 
 
       // var postQuery = new Parse.Query(App.Models .PostModel);
@@ -51,12 +55,18 @@
       commentQuery.equalTo('post', this.options.post);
       commentQuery.find({
         success: function (results) {
-          self.commentsCollection = results;
+          _.each(results, function (comment) {
+            console.log(comment);
+            console.log(comment.attributes.author.get("username"));
+              $('#commentsList').append(self.commentTemplate(comment.attributes));
+
+          });
         }
       });
     },
 
     addComment: function (e) {
+      var self = this;
       e.preventDefault();
 
       comment = new App.Models.CommentModel({
@@ -73,10 +83,11 @@
         comment.save(null, {
           success:function () {
             App.all_comments.add(comment);
+            $('#commentsList').append(self.commentTemplate(comment.attributes));
+
           }
         });
 
-        console.log(comment);
 
     }
   });
