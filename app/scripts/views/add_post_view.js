@@ -25,6 +25,7 @@
         title: $('#newPostTitle').val(),
         content: $('#newPostContent').val(),
         category:$('#newPostCategory').val().split(" "),
+        authorName: App.user.attributes.username,
         published: false,
         author: App.user
       });
@@ -53,6 +54,7 @@
         content: $('#newPostContent').val(),
         category:$('#newPostCategory').val().split(" "),
         published: true,
+        authorName: App.user.attributes.username,
         author: App.user
       });
 
