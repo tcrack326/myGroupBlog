@@ -37,6 +37,7 @@ body {
   /* margin-bottom: 5px; */
   background-color:HSLA(240, 1%, 35%, 1);
   padding:10px;
+  overflow:auto;
   /* background:url(../images/wood.jpg); */
   h1{
     font-family: 'Josefin Sans', sans-serif;
@@ -61,6 +62,40 @@ body {
 
     }
 }
+#userHeader{
+  display:block;
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+  background-color:HSLA(240, 1%, 35%, 1);
+  padding:10px;
+  overflow:auto;
+  /* background:url(../images/wood.jpg); */
+  h1{
+    font-family: 'Josefin Sans', sans-serif;
+    display:inline-block;
+    text-align:center;
+    color:white;
+      &:hover{
+        color:HSLA(52, 83%, 57%, 1);
+      }
+    }
+
+
+    button{
+      display:block;
+      float:right;
+      margin-bottom:10px;
+      margin-left:10px;
+      background-color:HSLA(0, 0%, 2%, 1);
+      border-radius:20px;
+      font-family: 'Josefin Sans', sans-serif;
+      &:hover{
+        color:HSLA(52, 83%, 57%, 1);
+      }
+
+    }
+}
+
 
 .idForm{
   display: block;
@@ -189,3 +224,6 @@ body {
           color:HSLA(52, 83%, 57%, 1);
         }
     }
+.topButtons{
+  margin-top:-50px;
+}

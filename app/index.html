@@ -38,12 +38,20 @@
 
 
     <script id='userHeaderTemp' type='text/template'>
-      <a href=''><h1>HOLLER</h1></a>
-      <a href=''><h3>All Posts</h3></a>
-      <a href='#/myposts'><h3>My Posts</h3></a>
-      <a href=''><button id="logOutBtn"> Log Out </button></a>
-      <a href='#/newpost'><button id="newPost"> New Post</button></a>
-      <span id="signature"></span>
+
+        <a href=''><h1>HOLLER</h1></a>
+        <div class="topButtons">
+          <div class="postOpt">
+            <a href=''><button>All Posts</button></a>
+            <a href='#/myposts'><button>My Posts</button></a>
+          </div>
+            <div class="standButtons">
+            <a href=''><button id="logOutBtn"> Log Out </button></a>
+            <a href='#/newpost'><button id="newPost"> New Post</button></a>
+            </div>
+          </div>
+        <span id="signature"></span>
+      
     </script>
 
     <script id='guestHeaderTemp' type='text/template'>
