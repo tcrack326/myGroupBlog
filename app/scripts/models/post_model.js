@@ -9,11 +9,12 @@
       title:'',
       content:'',
       category:[],
+      published:false
     },
 
 
    initialize: function () {
-      
+
     }
   });
 }());

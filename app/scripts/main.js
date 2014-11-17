@@ -22,7 +22,6 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
       e.preventDefault();
       e.stopPropagation();
       Parse.User.logOut();
-      console.log(Parse.User.current());
       $('#addPostBtn').text('Signup');
       $('#addPostBtn').attr('id', 'signUpBtn');
       $('#logoutBtn').text('Login');
@@ -61,7 +60,7 @@ Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ
     }
     else {
       currentUser = App.user.attributes.username;
-      $('#signature').text('User: ' + currentUser);
+      $('#signature').text('Welcome, ' + currentUser);
       $('#signUpBtn').text('Add New Post');
       $('#signUpBtn').attr('id', 'addPostBtn');
       $('#loginBtn').text('Logout');

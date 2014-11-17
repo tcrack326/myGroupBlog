@@ -7,7 +7,8 @@
       'signup' : 'userSignUp',
       'newpost': 'newPost',
       'singlePost/:id' : 'singlePost',
-      'edit/:id' : 'editPost'
+      'edit/:id' : 'editPost',
+      'myposts' : 'myPost'
     },
 
 
@@ -37,6 +38,10 @@
     editPost: function(id) {
       var editPost = App.all_posts.get(id);
       new App.Views.EditPost({ post: editPost });
+    },
+
+    myPost: function() {
+      new App.Views.MyPostView({ collection: App.all_posts });
     }
 
 

@@ -39,6 +39,8 @@
 
     <script id='userHeaderTemp' type='text/template'>
       <a href=''><h1>HOLLER</h1></a>
+      <a href=''><h3>All Posts</h3></a>
+      <a href='#/myposts'><h3>My Posts</h3></a>
       <a href=''><button id="logOutBtn"> Log Out </button></a>
       <a href='#/newpost'><button id="newPost"> New Post</button></a>
       <span id="signature"></span>
@@ -84,7 +86,8 @@
           <input id="newPostTitle"type="text" placeholder="Title">
           <input id="newPostCategory"type="text" placeholder="Category">
           <textarea id="newPostContent" type="text" placeholder="Content"/>
-          <button id="newPostSubmit">Submit</button>
+          <button id="newPostSubmit">Save as Draft</button>
+          <button id="newPostPublish">Save and Publish</button>
         </form>
     </script>
 
@@ -94,8 +97,8 @@
           <input id="editPostTitle" type="text" placeholder="Title" value="<%= title %>">
           <input id="editPostCategory" type="text" placeholder="Category" value="<%= category[0] %>"/>
           <textarea id="editPostContent" placeholder="Content"><%= content %></textarea>
-
-          <button id="editPostSubmit">Update Post</button>
+          <button id="editDraftPostSubmit">Save as Draft</button>
+          <button id="editPostSubmit">Save and Publish</button>
           <button id="deletePost">Delete Post</button>
         </form>
     </script>
@@ -151,6 +154,7 @@
         <script src="scripts/views/edit_view.js"></script>
         <script src="scripts/views/guest_header_view.js"></script>
         <script src="scripts/views/active_user_view.js"></script>
+        <script src="scripts/views/myposts_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/models/comment_model.js"></script>
