@@ -56,11 +56,9 @@
         content: $('#newPostContent').val(),
         category:$('#newPostCategory').val().split(" "),
         published: true,
-<<<<<<< HEAD
 
-=======
         authorName: App.user.attributes.username,
->>>>>>> 2ef743c01dd3f673dd580ec00fec7c07137d6428
+
         author: App.user
       });
 

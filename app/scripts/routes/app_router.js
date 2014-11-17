@@ -37,6 +37,7 @@
     singlePost: function(id) {
       var singlePost = App.all_posts.get(id);
       new App.Views.ReadPost({ post: singlePost , collection: App.all_posts});
+
     },
 
     editPost: function(id) {
