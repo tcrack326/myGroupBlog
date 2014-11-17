@@ -84,7 +84,7 @@
     <script type="text/template" id="newPostTemp">
         <form class="idForm" id="newPostForm">
           <input id="newPostTitle"type="text" placeholder="Title">
-          <input id="newPostCategory"type="text" placeholder="Category">
+          <input id="newPostCategory"type="text" placeholder="Category (separate with commas)">
           <textarea id="newPostContent" type="text" placeholder="Content"/>
           <button id="newPostSubmit">Save as Draft</button>
           <button id="newPostPublish">Save and Publish</button>
@@ -95,7 +95,7 @@
         <form class="idForm" id="editPostForm">
 
           <input id="editPostTitle" type="text" placeholder="Title" value="<%= title %>">
-          <input id="editPostCategory" type="text" placeholder="Category" value="<%= category[0] %>"/>
+          <input id="editPostCategory" type="text" placeholder="Category (separate with commas)" value="<%= category[0] %>"/>
           <textarea id="editPostContent" placeholder="Content"><%= content %></textarea>
           <button id="editDraftPostSubmit">Save as Draft</button>
           <button id="editPostSubmit">Save and Publish</button>
@@ -109,7 +109,7 @@
               <span><%= title %> by <a href='#/author/<%= authorName %>'><%= authorName %></a></span>
           </header>
           <p> <%= content  %></p>
-          <p class="bold">categories: <%= category %></p>
+          <p class="bold">categories: <a href="#/category/<%= category %>"><%= category %></a></p>
           <a href="#/edit/<%= objectId %>"><button id="editBtn">Edit</button></a>
           <div id="commentsContainer">
             <ul id="commentsList">
@@ -156,6 +156,7 @@
         <script src="scripts/views/active_user_view.js"></script>
         <script src="scripts/views/myposts_view.js"></script>
         <script src="scripts/views/author_view.js"></script>
+        <script src="scripts/views/category_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/models/comment_model.js"></script>

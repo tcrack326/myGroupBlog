@@ -24,7 +24,7 @@
       post = new App.Models.PostModel({
         title: $('#newPostTitle').val(),
         content: $('#newPostContent').val(),
-        category:$('#newPostCategory').val().split(" "),
+        category:$('#newPostCategory').val().split(","),
         authorName: App.user.attributes.username,
         published: false,
         author: App.user
