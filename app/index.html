@@ -56,7 +56,7 @@
     <script id="postTemp" type="text/template">
         <a href="#/singlePost/<%= objectId %>"<li class="posts">
             <header>
-                  <span><%= title %></span>
+                  <span><%= title %> by <%= authorName %></span>
             </header>
               <p> <%= content  %></p>
         </li></a>
@@ -106,7 +106,7 @@
     <script type="text/template"  id="readPostTemp">
         <div class='singlePost'>
           <header>
-              <span><%= title %></span>
+              <span><%= title %> by <a href='#/author/<%= authorName %>'><%= authorName %></a></span>
           </header>
           <p> <%= content  %></p>
           <p class="bold">categories: <%= category %></p>
@@ -155,6 +155,7 @@
         <script src="scripts/views/guest_header_view.js"></script>
         <script src="scripts/views/active_user_view.js"></script>
         <script src="scripts/views/myposts_view.js"></script>
+        <script src="scripts/views/author_view.js"></script>
         <script src="scripts/routes/app_router.js"></script>
         <script src="scripts/models/post_model.js"></script>
         <script src="scripts/models/comment_model.js"></script>

@@ -8,7 +8,8 @@
       'newpost': 'newPost',
       'singlePost/:id' : 'singlePost',
       'edit/:id' : 'editPost',
-      'myposts' : 'myPost'
+      'myposts' : 'myPost',
+      'author/:author' : 'authorPost'
     },
 
 
@@ -42,6 +43,10 @@
 
     myPost: function() {
       new App.Views.MyPostView({ collection: App.all_posts });
+    },
+
+    authorPost: function (author) {
+      new App.Views.AuthorView({ authorPost: author, collection: App.all_posts });
     }
 
 
