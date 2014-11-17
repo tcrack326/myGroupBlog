@@ -37,11 +37,11 @@
       //post.setACL(new Parse.ACL(App.user));
 
         post.save(null, {
-          success:function(){
+          success: function(){
             App.all_posts.add(post);
             App.router.navigate('', { trigger : true });
           }
-        })
+        });
 
     },
 
@@ -68,7 +68,7 @@
             App.all_posts.add(post);
             App.router.navigate('', { trigger : true });
           }
-        })
+        });
 
     }
 
