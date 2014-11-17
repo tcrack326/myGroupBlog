@@ -5,7 +5,7 @@
 
   idAttribute:'objectId',
 
-    defaults:{
+    defaults: {
       content:''
     },
 

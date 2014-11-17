@@ -1,5 +1,5 @@
 (function(){
-App.Views.HomeView = Parse.View.extend({
+App.Views.MyPostView = Parse.View.extend({
 
   tagName: 'ul',
 
@@ -16,7 +16,7 @@ App.Views.HomeView = Parse.View.extend({
       this.collection.on('sync', this.collection, this);
 
       //render is now in the query
-      this.publishedPostsQuery();
+      this.userPostsQuery();
 
     //this.render();
 
@@ -24,12 +24,13 @@ App.Views.HomeView = Parse.View.extend({
     $('#viewContainer').html(this.$el);
   },
 
-  publishedPostsQuery: function () {
+  userPostsQuery: function () {
 
       var self = this;
+      App.user = Parse.User.current();
 
       var userPosts = new Parse.Query(App.Models.PostModel);
-      userPosts.equalTo('published', true);
+      userPosts.equalTo('author', App.user);
       userPosts.find({
         success: function (results) {
           self.collection = results;
@@ -40,9 +41,7 @@ App.Views.HomeView = Parse.View.extend({
     },
 
   render:function(){
-
     var self = this;
-
       _.each(this.collection, function(post){
         self.$el.append(self.template(post.toJSON()));
 
