@@ -1,5 +1,5 @@
 (function(){
-App.Views.HomeView = Parse.View.extend({
+App.Views.AuthorView = Parse.View.extend({
 
   tagName: 'ul',
 
@@ -15,22 +15,21 @@ App.Views.HomeView = Parse.View.extend({
       this.collection.off();
       this.collection.on('sync', this.collection, this);
 
-      //render is now in the query
-      this.publishedPostsQuery();
-
+    this.authorPostsQuery();
+    //render is now in the query
     //this.render();
 
 
     $('#viewContainer').html(this.$el);
   },
 
-  publishedPostsQuery: function () {
+  authorPostsQuery: function () {
 
       var self = this;
 
-      var userPosts = new Parse.Query(App.Models.PostModel);
-      userPosts.equalTo('published', true);
-      userPosts.find({
+      var authorPosts = new Parse.Query(App.Models.PostModel);
+      authorPosts.equalTo('authorName', this.options.authorPost);
+      authorPosts.find({
         success: function (results) {
           self.collection = results;
           self.render();

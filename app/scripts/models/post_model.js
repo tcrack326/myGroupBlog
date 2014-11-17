@@ -8,6 +8,7 @@
     defaults:{
       title:'',
       content:'',
+      authorName:'',
       category:[],
       published:false
 
