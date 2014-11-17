@@ -8,6 +8,7 @@
     "bourbon": "~4.0.2",
     "neat": "~1.6.0",
     "normalize-css": "~3.0.1",
-    "bitters": "~0.10.1"
+    "bitters": "~0.10.1",
+    "datejs": "~1.0.0-rc1"
   }
 }

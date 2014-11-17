@@ -104,6 +104,7 @@
         <div class='singlePost'>
           <header>
               <span><%= title %></span>
+              <span><%= createdAt %></span>
 
           </header>
           <p> <%= content  %></p>
@@ -123,6 +124,7 @@
       <li>
       <span><%= author.attributes.username %> said: </span>
         <p><%= content %></p>
+
       </li>
     </script>
 
@@ -131,6 +133,7 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/datejs/build/date.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
