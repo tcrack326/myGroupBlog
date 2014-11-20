@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>groupBlog</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <header id="topHeader">
+        <a href=''><h1>HOLLER</h1></a>
+        <button id="loginBtn"> Login </button>
+        <button id="signUpBtn"> Signup </button>
+        <span id="signature"></span>
+    </header>
+    <div class = "container">
+      <div id="viewContainer">
+
+        <ul id="listOfPosts"></ul>
+
+      </div>
+    </div>
+
+
+    <script id='userHeaderTemp' type='text/template'>
+
+        <a href=''><h1>HOLLER</h1></a>
+        <div class="topButtons">
+          <div class="postOpt">
+            <a href=''><button>All Posts</button></a>
+            <a href='#/myposts'><button>My Posts</button></a>
+          </div>
+            <div class="standButtons">
+            <a href=''><button id="logOutBtn"> Log Out </button></a>
+            <a href='#/newpost'><button id="newPost"> New Post</button></a>
+            </div>
+          </div>
+        <span id="signature"></span>
+
+    </script>
+
+    <script id='guestHeaderTemp' type='text/template'>
+      <a href=''><h1>HOLLER</h1></a>
+      <a href="#/login"><button id="loginBtn"> Login </button></a>
+      <a href='#/signup'><button id="signUpBtn"> Signup </button></a>
+      <span id="signature"></span>
+    </script>
+
+    <script id="postTemp" type="text/template">
+        <a href="#/singlePost/<%= objectId %>"<li class="posts">
+            <header>
+                  <span><%= title %> by <%= authorName %></span>
+            </header>
+              <p> <%= content  %></p>
+        </li></a>
+    </script>
+
+    <script type="text/template" id="loginTemp">
+          <form class="idForm" id="loginForm">
+            <input id="username"type="text" placeholder="Username">
+            <input id="password"type="password" placeholder="Password" >
+            <button id="loginSubmit">Submit</button>
+          </form>
+    </script>
+
+
+    <script type="text/template" id="signUpTemp">
+        <form class="idForm" id="signUpForm">
+          <input id="usernameNew"type="text" placeholder="Username">
+          <input id="passwordNew"type="password" placeholder="Password">
+          <input id="emailNew" type="email" placeholder="e-mail">
+          <button id="signUpSubmit">Submit</button>
+        </form>
+    </script>
+
+
+    <script type="text/template" id="newPostTemp">
+        <form class="idForm" id="newPostForm">
+          <input id="newPostTitle"type="text" placeholder="Title">
+          <input id="newPostCategory"type="text" placeholder="Category (separate with commas)">
+          <textarea id="newPostContent" type="text" placeholder="Content"/>
+          <button id="newPostSubmit">Save as Draft</button>
+          <button id="newPostPublish">Save and Publish</button>
+        </form>
+    </script>
+
+    <script type="text/template" id="editPostTemp">
+        <form class="idForm" id="editPostForm">
+
+          <input id="editPostTitle" type="text" placeholder="Title" value="<%= title %>">
+          <input id="editPostCategory" type="text" placeholder="Category (separate with commas)" value="<%= category[0] %>"/>
+          <textarea id="editPostContent" placeholder="Content"><%= content %></textarea>
+          <button id="editDraftPostSubmit">Save as Draft</button>
+          <button id="editPostSubmit">Save and Publish</button>
+          <button id="deletePost">Delete Post</button>
+        </form>
+    </script>
+
+    <script type="text/template"  id="readPostTemp">
+        <div class='singlePost'>
+          <header>
+
+              <span><%= title %> by <a href='#/author/<%= authorName %>'><%= authorName %></a></span>
+
+          </header>
+          <p> <%= content  %></p>
+          <p class="bold">categories: <a href="#/category/<%= category %>"><%= category %></a></p>
+          <a href="#/edit/<%= objectId %>"><button id="editBtn">Edit</button></a>
+          <div id="commentsContainer">
+            <ul id="commentsList">
+            </ul>
+            <textarea id="commentArea" placeholder="Place your comments here"></textarea>
+            <button id="addCommentBtn">Add Comment </button>
+          </div>
+
+        </div>
+    </script>
+
+    
+
+    <script type="text/template" id="commentTemp">
+      <li>
+      <span><%= author.attributes.username %> said: </span>
+        <p><%= content %></p>
+
+      </li>
+    </script>
+
+
+    <script src="scripts/vendor.js"></script>
+
+    <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      window.App = {};
+      App.Views = {};
+      App.Collections = {};
+      App.Models = {};
+      App.Routers = {};
+    </script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>

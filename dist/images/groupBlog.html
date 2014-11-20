@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:9000/? -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>groupBlog</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="http://localhost:9000/bower_components/normalize-css/normalize.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="http://localhost:9000/styles/main.css?livereload=1415812965883">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="./groupBlog_files/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header id="topHeader">
+        <a href=""><h1>HOLLER</h1></a>
+        <a href="http://localhost:9000/?#/login"><button id="loginBtn"> Login </button></a>
+        <a href="http://localhost:9000/?#/signup"><button id="signUpBtn"> Signup </button></a>
+    </header>
+    <div class="container">
+      <div id="viewContainer"><ul class="postList">
+
+        <li class="posts">
+            <header><span>ok</span></header>
+            <div>
+              <p> </p>
+            </div>
+        </li>
+    
+
+        <li class="posts">
+            <header><span>ok</span></header>
+            <div>
+              <p>  somethin dood 123 ok now i am using the spaces mabye it will work differently</p>
+            </div>
+        </li>
+    </ul></div>
+    </div>
+
+    <script id="postTemp" type="text/template">
+
+        <li class="posts">
+            <header><span><%= title %></span></header>
+            <div>
+              <p> <%= content  %></p>
+            </div>
+        </li>
+    </script>
+
+    <script type="text/template" id="loginTemp">
+          <form class="idForm" id="loginForm">
+            <input id="username"type="text" placeholder="Username">
+            <input id="password"type="password" placeholder="Password" >
+            <button id="loginSubmit">submit</button>
+          </form>
+    </script>
+
+
+    <script type="text/template" id="signUpTemp">
+        <form class="idForm" id="signUpForm">
+          <input id="usernameNew"type="text" placeholder="Username">
+          <input id="passwordNew"type="password" placeholder="Password">
+          <input id="emailNew" type="email" placeholder="e-mail">
+          <button id="signUpSubmit">submit</button>
+        </form>
+    </script>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./groupBlog_files/jquery.js"></script>
+    <script src="./groupBlog_files/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script src="./groupBlog_files/parse-1.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      window.App = {};
+      App.Views = {};
+      App.Collections = {};
+      App.Models = {};
+      App.Routers = {};
+    </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="./groupBlog_files/login_view.js"></script>
+        <script src="./groupBlog_files/home_view.js"></script>
+        <script src="./groupBlog_files/signup_view.js"></script>
+        <script src="./groupBlog_files/app_router.js"></script>
+        <script src="./groupBlog_files/post_model.js"></script>
+        <script src="./groupBlog_files/post_collection.js"></script>
+        <script src="./groupBlog_files/main.js"></script>
+        <!-- endbuild -->
+
+<script>//<![CDATA[
+document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
+//]]></script><script src="./groupBlog_files/livereload.js"></script>
+
+
+</body></html>
