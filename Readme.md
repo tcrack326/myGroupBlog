@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## Holler Blog
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This is a blog application built with Backbone.js and Parse.  It is a collaboration with Matthew Griffeth from the Iron Yard.
