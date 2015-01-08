@@ -279,7 +279,7 @@ App.Views.HomeView = Parse.View.extend({
       commentQuery.find({
         success: function (results) {
           _.each(results, function (comment) {
-            console.log(comment);
+            
             comment.attributes.author.fetch().then(function (fetchedAuthor){
               //console.log(fetchedAuthor);
               $('#commentsList').append(self.commentTemplate(comment.attributes));
@@ -329,7 +329,7 @@ App.Views.HomeView = Parse.View.extend({
       'click #addCommentBtn': 'addComment'
     },
 
-    template: _.template($('#draftPostTemp').html()),
+    template: _.template($('#editPostTemp').html()),
     commentTemplate: _.template($('#commentTemp').html()),
 
     initialize: function (options) {
