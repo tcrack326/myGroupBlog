@@ -56,7 +56,7 @@
       commentQuery.find({
         success: function (results) {
           _.each(results, function (comment) {
-            console.log(comment);
+            
             comment.attributes.author.fetch().then(function (fetchedAuthor){
               //console.log(fetchedAuthor);
               $('#commentsList').append(self.commentTemplate(comment.attributes));

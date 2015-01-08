@@ -6,7 +6,7 @@
       'click #addCommentBtn': 'addComment'
     },
 
-    template: _.template($('#draftPostTemp').html()),
+    template: _.template($('#editPostTemp').html()),
     commentTemplate: _.template($('#commentTemp').html()),
 
     initialize: function (options) {
