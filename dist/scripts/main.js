@@ -817,7 +817,7 @@ App.Views.CategoryView = Parse.View.extend({
   });
 }());
 
-Parse.initialize("gLBx6znzsrsBwyvjWsdrxKkrKn7MIQHlA2BTkhMR", "bh8PUYEckGb4ZeWjNQ8tv9POmTvzzN3L6NDWnzSq");
+Parse.initialize("0EzgEwdLayMVQDmgd21dMXrHgs8cRSoVwFOa3TPg", "ue84s9ehnEATPuerobHXaWqYa2iPUFxNHzkPfEH2");
 
 (function(){
 
