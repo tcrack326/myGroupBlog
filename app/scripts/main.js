@@ -1,4 +1,4 @@
-Parse.initialize("CN24QFyVdFSbi0a0g01MdcGzq8HUE6WanQewccgt", "Q3wZuLIb18zGigFgTJpGQXnKd6UEDK44c4PQt3l0");
+Parse.initialize("0EzgEwdLayMVQDmgd21dMXrHgs8cRSoVwFOa3TPg", "ue84s9ehnEATPuerobHXaWqYa2iPUFxNHzkPfEH2");
 
 (function(){
 
